@@ -56,7 +56,7 @@ if(NOT EXISTS ${opencv_LIBS})
                -DOPENCV_GENERATE_PKGCONFIG=OFF
                -DOPENCV_EXTRA_MODULES_PATH=${contrib_LIBS}
                -DOPENCV_ENABLE_NONFREE=ON
-               -DCMAKE_CXX_STANDARD=20
+               #-DCMAKE_CXX_STANDARD=20
                -DCMAKE_CXX_STANDARD_REQUIRED=ON
                -DCMAKE_INSTALL_PREFIX=./install
                -DGLOG_INCLUDE_DIR=${glog_INCLUDE_DIRS}

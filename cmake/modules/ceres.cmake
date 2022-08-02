@@ -35,7 +35,6 @@ if (NOT EXISTS ${ceres_LIBS})
             CMAKE_ARGS
                 -DCMAKE_BUILD_TYPE=Release
                 -DCERES_THREADING_MODEL=CXX_THREADS
-                -DCMAKE_CXX_STANDARD=20
                 -DCMAKE_CXX_STANDARD_REQUIRED=ON
                 -DCMAKE_CXX_FLAGS=-march=native
                 -DCMAKE_INSTALL_PREFIX=./install
