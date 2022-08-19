@@ -144,7 +144,7 @@ xhost local:docker
 And following command to open shell inside `dsopp:main` image in the current directory:
 
 ```
-docker run --rm -it -v /tmp/.X11-unix:/tmp/.X11-unix -e HOME=$HOME -e DISPLAY=$DISPLAY -w $(pwd) -v $HOME:$HOME --device=/dev/dri:/dev/dri -it dsopp:main bash
+docker run --rm -it -v /tmp/.X11-unix:/tmp/.X11-unix -e HOME=$HOME --net=host -e DISPLAY=$DISPLAY -w $(pwd) -v $HOME:$HOME --device=/dev/dri:/dev/dri -it dsopp:main bash
 ```
 
 </details>
@@ -193,7 +193,7 @@ naviagate to ./test/test_data/tummono/
 sh download_data.sh (sequence id)
 
 navigate to .
-./build/src/application/dsopp_main --config_file_path ./test/test_data/tummono/mono.yaml
+./build/src/application/dsopp_main --config_file_path ./test/test_data/tummono/sequence_<id>/<standart/fast/dense>.yaml
 ```
 
 `dsopp_main` outputs `track.bin` file. This is the whole track output with points and all frame poses.
@@ -207,6 +207,7 @@ To view it use `viewer_main` application
 
 ### [Extending DSOPP](docs/extending_dsopp.md)
 
+### [DSOPP python utils](docs/pydsopp_utilities.md)
 <!---
 ### Python library only build
 
